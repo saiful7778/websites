@@ -1,0 +1,2 @@
+light-link: http://marveltheme.com/tf/html/johny/johny-legend/index.html
+dark-link: http://marveltheme.com/tf/html/johny/johny-legend/index-dark.html

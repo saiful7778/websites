@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel {
+  margin: 4rem auto;
+  width: 80%;
+  position: relative;
+}
+.carousel .carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+.carousel .carousel-track {
+  grid-template-columns: repeat(1, 1fr);
+  transition: all 0.3s ease;
+  position: relative;
+  list-style: none;
+  cursor: grab;
+}
+.carousel .carousel-track .slide {
+  position: absolute;
+  height: 170px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.carousel .carousel-track .slide.grabbing {
+  cursor: grabbing;
+}
+.carousel .carousel-btn {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  z-index: 1;
+}
+.carousel .carousel-btn.left-btn {
+  left: -50px;
+}
+.carousel .carousel-btn.right-btn {
+  right: -50px;
+}
+.carousel .carousel-btn.hide-btn {
+  display: none;
+}
+.carousel .carousel-nav {
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.carousel .carousel-nav .carousel-indicator {
+  border: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  margin: 0 0.2rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.carousel .carousel-nav .carousel-indicator.active {
+  width: 40px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 576px) {
+  .carousel {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel .carousel-container {
+    height: 100%;
+    overflow: visible;
+  }
+  .carousel .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 1rem;
+    cursor: auto;
+  }
+  .carousel .carousel-track .slide {
+    position: static;
+    height: 100%;
+  }
+  .carousel .carousel-track .slide > * {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel .carousel-btn {
+    display: none;
+  }
+  .carousel .carousel-nav {
+    display: none;
+  }
+}
+.carousel .carousel-btn {
+  border: 0;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+}
+.carousel .carousel-btn i {
+  color: #fff;
+}
+.carousel .carousel-indicator {
+  background: #000;
+}
+
+.card {
+  text-align: center;
+  background: #fff;
+  padding: 2rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
+  transition: all 0.3s ease;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card .card-icon {
+  width: 3rem;
+  filter: opacity(0.8);
+  margin-left: auto;
+  margin-right: auto;
+}
+.card .card-title {
+  color: #545353;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.card .card-tagline {
+  color: #a39e9e;
+}
